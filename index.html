@@ -10,7 +10,6 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            cursor: none; /* Hide default cursor to use magical custom cursor */
         }
 
         body {
@@ -33,36 +32,6 @@
             background: linear-gradient(rgba(245, 235, 217, 0.1), rgba(245, 235, 217, 0.1)), 
                         url('Gemini_Generated_Image_ivh8q9ivh8q9ivh8.png') no-repeat center center;
             background-size: 100% 100%;
-        }
-
-        /* Magical Custom Cursor Styles */
-        .cursor {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, #ffdf7e 0%, #d4af37 60%, rgba(212,175,55,0) 100%);
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            transition: width 0.2s, height: 0.2s;
-            z-index: 10000;
-            box-shadow: 0 0 12px #d4af37, 0 0 20px #ffdf7e;
-        }
-
-        .cursor-trail {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 8px;
-            background: #b8860b;
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            opacity: 0.7;
         }
 
         /* Opening Overlay Modal */
@@ -219,11 +188,6 @@
 </head>
 <body>
 
-    <!-- Magical Custom Cursor Elements -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-trail" id="trail1"></div>
-    <div class="cursor-trail" id="trail2"></div>
-
     <!-- Background Audio -->
     <audio id="bg-music" loop>
         <source src="Naguva Nayana Madhura Mouna  Pallavi Anupallavi  Anil Kapoor  Kiran  Kannada Video Song - SRS Media Vision Entertainment.mp3" type="audio/mpeg">
@@ -323,37 +287,6 @@
 
     <!-- JavaScript Control Logic -->
     <script>
-        // Custom Magical Cursor Animation
-        const cursor = document.getElementById('cursor');
-        const trail1 = document.getElementById('trail1');
-        const trail2 = document.getElementById('trail2');
-
-        let mouseX = 0, mouseY = 0;
-        let t1X = 0, t1Y = 0;
-        let t2X = 0, t2Y = 0;
-
-        window.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            cursor.style.left = mouseX + 'px';
-            cursor.style.top = mouseY + 'px';
-        });
-
-        function animateCursor() {
-            t1X += (mouseX - t1X) * 0.2;
-            t1Y += (mouseY - t1Y) * 0.2;
-            trail1.style.left = t1X + 'px';
-            trail1.style.top = t1Y + 'px';
-
-            t2X += (t1X - t2X) * 0.2;
-            t2Y += (t1Y - t2Y) * 0.2;
-            trail2.style.left = t2X + 'px';
-            trail2.style.top = t2Y + 'px';
-
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
         // Automatic Scrolling Control Logic
         let isAutoScrolling = false;
 
