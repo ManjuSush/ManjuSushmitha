@@ -20,19 +20,21 @@
             overflow-x: hidden;
             position: relative;
         }
-/* Background 1 for Hero / Cover Sections (Section 1 & 2) */
+
+        /* Background 1 for Hero / Cover Sections (Section 1 & 2) - Fitted to full screen */
         .hero-bg {
-            background: linear-gradient(rgba(245, 235, 217, 0.3), rgba(245, 235, 217, 0.3)), 
-                        url('Gemini_Generated_Image_904oog904oog904o.png') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(rgba(245, 235, 217, 0.1), rgba(245, 235, 217, 0.1)), 
+                        url('Gemini_Generated_Image_904oog904oog904o.png') no-repeat center center;
+            background-size: 100% 100%;
         }
 
-        /* Background 2 for the rest of the website (Section 3 & 4) */
+        /* Background 2 for the rest of the website (Section 3 & 4) - Fitted to full screen */
         .content-bg {
-            background: linear-gradient(rgba(245, 235, 217, 0.3), rgba(245, 235, 217, 0.3)), 
-                        url('Gemini_Generated_Image_ivh8q9ivh8q9ivh8.png') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(rgba(245, 235, 217, 0.1), rgba(245, 235, 217, 0.1)), 
+                        url('Gemini_Generated_Image_ivh8q9ivh8q9ivh8.png') no-repeat center center;
+            background-size: 100% 100%;
         }
+
         /* Magical Custom Cursor Styles */
         .cursor {
             position: fixed;
@@ -162,25 +164,26 @@
 
         .invitation-box {
             max-width: 700px;
-            padding: 40px;
+            width: 100%;
+            padding: 30px;
             border: 1px solid #d4af37;
-            background: rgba(255, 252, 245, 0.75);
+            background: rgba(255, 252, 245, 0.85);
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
         .parents-grid {
             display: flex;
             justify-content: space-around;
-            margin: 30px 0;
+            margin: 20px 0;
             width: 100%;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .calendar-box {
             background: rgba(253, 250, 243, 0.85);
             border: 1px solid #d4af37;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 15px;
+            margin-top: 15px;
             display: inline-block;
         }
 
@@ -190,8 +193,8 @@
         }
 
         .calendar-table th, .calendar-table td {
-            padding: 8px 12px;
-            font-size: 0.9rem;
+            padding: 6px 10px;
+            font-size: 0.85rem;
         }
 
         .highlight-date {
@@ -200,24 +203,17 @@
             border-radius: 50%;
         }
 
-        .map-frame {
-            width: 100%;
-            max-width: 600px;
-            height: 250px;
-            background: rgba(230, 222, 208, 0.85);
-            border: 1px solid #d4af37;
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-style: italic;
+        .watermark-footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
             color: #7a5c44;
         }
 
-        .watermark-footer {
-            margin-top: 30px;
-            font-size: 0.85rem;
-            color: #7a5c44;
+        /* Responsive adjustments for phones */
+        @media(max-width: 768px) {
+            .sec1-names { font-size: 2.8rem; }
+            .section { padding: 40px 10px; }
+            .invitation-box { padding: 20px 10px; }
         }
     </style>
 </head>
@@ -248,58 +244,57 @@
         </div>
     </div>
 
-    <!-- HERO SECTION 1 (Uses Background Image 1) -->
+    <!-- HERO SECTION 1 -->
     <section class="section hero-bg">
-        <div style="font-size: 3rem; color: #d4af37; margin-bottom: 10px;"></div>
         <h1 class="script-text sec1-names">Manjunath R</h1>
-        <h2 style="font-size: 2rem; margin: 5px 0;">&</h2>
+        <h2 style="font-size: 1.8rem; margin: 5px 0;">&</h2>
         <h1 class="script-text sec1-names">Sushmitha R</h1>
-        <p style="letter-spacing: 2px; font-size: 0.9rem; margin-top: 15px; text-transform: uppercase;">Engagement Invitation</p>
+        <p style="letter-spacing: 2px; font-size: 0.85rem; margin-top: 15px; text-transform: uppercase;">Engagement Invitation</p>
         <p style="margin-top: 5px; font-weight: 500;">Sri Kumbeshwara Party Hall</p>
-        <p style="margin-top: 15px; font-size: 1.1rem;">AT 2:00 PM</p>
-        <p style="margin-top: 10px; font-weight: 600; letter-spacing: 1px;">WEDNESDAY &nbsp;|&nbsp; 23 &nbsp;|&nbsp; SEPTEMBER &nbsp; 2026</p>
+        <p style="margin-top: 10px; font-size: 1rem;">AT 2:00 PM</p>
+        <p style="margin-top: 8px; font-weight: 600; letter-spacing: 1px; font-size: 0.9rem;">WEDNESDAY &nbsp;|&nbsp; 23 &nbsp;|&nbsp; SEPTEMBER &nbsp; 2026</p>
     </section>
 
-    <!-- HERO SECTION 2 (Uses Background Image 1) -->
+    <!-- HERO SECTION 2 -->
     <section class="section hero-bg">
         <div class="invitation-box">
-            <h3 style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">
+            <h3 style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
                 TOGETHER WITH OUR FAMILIES, WE INVITE YOU TO CELEBRATE THE BEGINNING OF OUR BEAUTIFUL JOURNEY.
             </h3>
             
             <div class="parents-grid">
                 <div>
-                    <p style="font-size: 0.75rem; color: #7a5c44;">Mr. & Mrs.</p>
-                    <p style="font-weight: 600; margin: 5px 0;">RAJANNA C</p>
-                    <p style="font-weight: 600; margin: 5px 0;">SHIVAMMA M</p>
-                    <p style="font-size: 0.75rem; color: #7a5c44; margin-top: 5px;">BADAKANAPALYA BENGALURU</p>
+                    <p style="font-size: 0.7rem; color: #7a5c44;">Mr. & Mrs.</p>
+                    <p style="font-weight: 600; margin: 3px 0;">RAJANNA C</p>
+                    <p style="font-weight: 600; margin: 3px 0;">SHIVAMMA M</p>
+                    <p style="font-size: 0.65rem; color: #7a5c44; margin-top: 3px;">BADAKANAPALYA BENGALURU</p>
                 </div>
                 <div>
-                    <p style="font-size: 0.75rem; color: #7a5c44;">Mr. & Mrs.</p>
-                    <p style="font-weight: 600; margin: 5px 0;">RAMESH C</p>
-                    <p style="font-weight: 600; margin: 5px 0;">SHOBA A S</p>
-                    <p style="font-size: 0.75rem; color: #7a5c44; margin-top: 5px;">DEVANAHALLI BENGALURU</p>
+                    <p style="font-size: 0.7rem; color: #7a5c44;">Mr. & Mrs.</p>
+                    <p style="font-weight: 600; margin: 3px 0;">RAMESH C</p>
+                    <p style="font-weight: 600; margin: 3px 0;">SHOBA A S</p>
+                    <p style="font-size: 0.65rem; color: #7a5c44; margin-top: 3px;">DEVANAHALLI BENGALURU</p>
                 </div>
             </div>
 
-            <p style="font-size: 0.85rem; letter-spacing: 1px; margin-top: 30px; text-transform: uppercase;">We Joyfully Announce The Engagement of Our Children</p>
-            <h2 class="script-text" style="font-size: 2.5rem; margin-top: 10px;">Manjunath R</h2>
-            <p style="font-size: 0.8rem; letter-spacing: 2px;">GROOM</p>
-            <h2 style="margin: 10px 0; font-family: 'Cinzel', serif;">&</h2>
-            <h2 class="script-text" style="font-size: 2.5rem;">Sushmitha R</h2>
-            <p style="font-size: 0.8rem; letter-spacing: 2px;">BRIDE</p>
+            <p style="font-size: 0.75rem; letter-spacing: 1px; margin-top: 20px; text-transform: uppercase;">We Joyfully Announce The Engagement of Our Children</p>
+            <h2 class="script-text" style="font-size: 2.2rem; margin-top: 5px;">Manjunath R</h2>
+            <p style="font-size: 0.75rem; letter-spacing: 2px;">GROOM</p>
+            <h2 style="margin: 5px 0; font-family: 'Cinzel', serif; font-size: 1.2rem;">&</h2>
+            <h2 class="script-text" style="font-size: 2.2rem;">Sushmitha R</h2>
+            <p style="font-size: 0.75rem; letter-spacing: 2px;">BRIDE</p>
         </div>
     </section>
 
-    <!-- CONTENT SECTION 3 (Uses Background Image 2) -->
+    <!-- CONTENT SECTION 3 -->
     <section class="section content-bg">
         <h2>ENGAGEMENT PARTY INFO</h2>
-        <p style="margin-top: 10px; font-size: 0.95rem;">THE ENGAGEMENT PARTY WILL TAKE PLACE AT:</p>
-        <h3 style="font-size: 2rem; margin: 15px 0;">2:00 PM</h3>
-        <p style="font-weight: 600; letter-spacing: 1px;">WEDNESDAY &nbsp;|&nbsp; 23 &nbsp;|&nbsp; SEPTEMBER &nbsp;|&nbsp; 2026</p>
+        <p style="margin-top: 8px; font-size: 0.9rem;">THE ENGAGEMENT PARTY WILL TAKE PLACE AT:</p>
+        <h3 style="font-size: 1.8rem; margin: 10px 0;">2:00 PM</h3>
+        <p style="font-weight: 600; letter-spacing: 1px; font-size: 0.9rem;">WEDNESDAY &nbsp;|&nbsp; 23 &nbsp;|&nbsp; SEPTEMBER &nbsp;|&nbsp; 2026</p>
 
         <div class="calendar-box">
-            <h4 style="font-family: 'Cinzel', serif; font-size: 1rem; margin-bottom: 5px;">September 2026</h4>
+            <h4 style="font-family: 'Cinzel', serif; font-size: 0.9rem; margin-bottom: 5px;">September 2026</h4>
             <table class="calendar-table">
                 <tr><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th></tr>
                 <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
@@ -311,17 +306,18 @@
         </div>
     </section>
 
-    <!-- CONTENT SECTION 4 (Uses Background Image 2) -->
+    <!-- CONTENT SECTION 4 -->
     <section class="section content-bg" style="border-bottom: none;">
-        <h2 style="letter-spacing: 1px;">ENGAGEMENT PARTY VENUE</h2>
-        <p style="font-size: 0.9rem; margin-top: 5px;">Sri Kumbeshwara Party Hall</p>
+        <h2 style="letter-spacing: 1px; font-size: 1.3rem;">ENGAGEMENT PARTY VENUE</h2>
+        <p style="font-size: 0.85rem; margin-top: 5px;">Sri Kumbeshwara Party Hall</p>
         
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.6536582721847!2d77.71460767485935!3d13.243996287096977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1d61f07707c1%3A0x373ec0fa0eccfc00!2sSri%20Kumbeshwara%20Party%20Hall!5e1!3m2!1sen!2sin!4v1789317849299!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>>
-       
+        <div style="width: 100%; max-width: 500px; height: 200px; margin: 15px 0; border: 1px solid #d4af37; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.6536582721847!2d77.71460767485935!3d13.243996287096977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1d61f07707c1%3A0x373ec0fa0eccfc00!2sSri%20Kumbeshwara%20Party%20Hall!5e1!3m2!1sen!2sin!4v1789317849299!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-        <a href="https://maps.google.com" target="_blank" style="color: #5c1821; font-size: 0.9rem; font-weight: 600; text-decoration: none; margin-bottom: 20px;">📍 Get directions</a>
+
+        <a href="https://maps.google.com" target="_blank" style="color: #5c1821; font-size: 0.85rem; font-weight: 600; text-decoration: none; margin-bottom: 10px;">📍 Get directions</a>
         
-        <p style="margin-top: 20px; font-weight: 500; font-size: 0.95rem;">Your presence would be the greatest gift we could receive!</p>
+        <p style="margin-top: 10px; font-weight: 500; font-size: 0.9rem;">Your presence would be the greatest gift we could receive!</p>
         <div class="watermark-footer">Designed with love for Manjunath & Sushmitha</div>
     </section>
 
